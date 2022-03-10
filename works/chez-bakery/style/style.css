@@ -1,0 +1,160 @@
+@charset 'utf-8';
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* 変数 */
+:root{
+    --main-color:#ffe556;
+    --main-color2:#339900;
+    --acsent-color:#ff9933;
+}
+
+/* スクロール */
+#big-wrapper{
+    overflow:overlay;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    width: 100vw;
+    padding: 0!important;
+}
+
+/* top-wrapper */
+#top-wrapper{
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: center;
+    background-image:url(../images/top.JPG);
+    background-size:cover;
+    background-position: center center;
+}
+.wrapper-title{
+    font-size: 100px;
+    width: 100vw;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    display: inline-block;
+    margin: 25vh 0 0 0;
+    color:var(--main-color);
+}
+#top-text{
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* menu-wrapper */
+#menu-wrapper{
+    height: 80vh;
+    width: 100%;
+    scroll-snap-align: center;
+    background-image: url(../images/menu.JPG);
+    background-position: center center;
+    background-size: cover;
+}
+
+/* contact-wrapper */
+#contact-wrapper{
+    height: 80vh;
+    scroll-snap-align: center;
+    width: 100%;
+}
+.menu-title{
+    margin-top: 10vh;
+}
+.menu-list{
+    margin:0 auto;
+    width: 288px;
+}
+.menu-list-item{
+    line-height: 1.7;
+    margin: 0;
+}
+.menu-list-item:nth-child(1)::after{
+    content:"¥200";
+    margin-left: 48px;
+}
+.menu-list-item:nth-child(2)::after{
+    content:"¥220";
+    margin-left: 128px;
+}
+.menu-list-item:nth-child(3)::after{
+    content:"¥240";
+    margin-left: 64px;
+}
+.menu-list-item:nth-child(4)::after{
+    content:"¥280";
+    margin-left: 16px;
+}
+.menu-list-item:nth-child(5)::after{
+    content:"¥300";
+    margin-left: 144px;
+}
+.menu-list-item:nth-child(6)::after{
+    content:"¥300";
+    margin-left: 64px;
+}
+.menu-list-item:nth-child(7)::after{
+    content:"¥320";
+    margin-left: 48px;
+}
+.menu-list-item:nth-child(8)::after{
+    content:"¥400";
+    margin-left: 66px;
+}
+.menu-list-item:nth-child(9)::after{
+    content:"¥700";
+    margin-left: 34px;
+}
+.menu-list-item:nth-child(10)::after{
+    content:"¥1,200";
+    margin-left: 112px;
+}
+
+/* contact-wrapper */
+#contact-wrapper{
+    scroll-snap-align: end;
+    height: 80vh;
+    width: 100%;
+    background-image: url(../images/contact.JPG);
+    background-size:cover;
+    background-position: center center;
+    text-align: center;
+}
+.contact-title{
+    margin-top: 10vh;
+    width: 80vw!important;
+}
+#contact-text{
+    margin-top: 4vh;
+}
+#contact-form{
+    margin-top: 2vh;
+}
+#contact-form a{
+    font-family: 'Amatic SC', cursive;
+    text-decoration: none;
+    font-size: 2rem;
+    color:var(--main-color2);
+    background: var(--acsent-color);
+    padding: 5px;
+    border-radius: 7px;
+}
+#sns-box{
+    margin-top: 1.5rem;
+}
+#sns-box a{
+    color: black;
+    text-decoration: none;
+}
+i{
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    display: inline-block;
+    transition:all 0.5s;
+}
+i:hover{
+    color: #fff;
+}
