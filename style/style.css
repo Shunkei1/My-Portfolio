@@ -1,0 +1,585 @@
+@charset 'utf-8';
+
+/* all */
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+html::-webkit-scrollbar {
+    display:none;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --base-color:#264653;
+    --main-color:#2a9d8f;
+    --second-main-color:#e9c46a;
+    --accsent-color:#f4a261;
+}
+
+.title{
+    color: var(--main-color);
+    text-align: center;
+}
+
+.border-wrapper{
+    border-bottom: 2px solid var(--accsent-color);
+}
+
+.dancing{
+    font-family: 'Dancing Script', cursive;
+}
+
+/* header */
+
+#mobile-header-wrapper,#desktop-header,.works-desktop-header-wrapper,.works-mobile-header-wrapper{
+    z-index: 1500;
+    position: fixed;
+    background: var(--accsent-color);
+    animation-name:fadeDownAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity: .75;
+}
+
+#mobile-logo,#desktop-logo{
+    color: var(--main-color);
+}
+
+#mobile-header{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--second-main-color);
+}
+
+.openbtn{
+    position: absolute;
+    top: 1vh;
+    right: 4vw;
+}
+
+#mobile-header .gnavi{
+    padding-top: 32.5vh;
+}
+
+
+
+/* footer */
+footer{
+    width: 100vw;
+    background: var(--base-color);
+}
+
+.works-footer-li{
+    margin-top: 14px;
+}
+
+.works-footer-link{
+    text-align: center;
+    margin-left: calc(50vw - 31px);
+}
+
+/* portfolio-footer */
+
+#portfolio-footer{
+    border-top: 1px solid var(--accsent-color);
+}
+
+.portfolio-footer-ul{
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-footer-li{
+    display: inline-block;
+    margin: 0 2vw 0 1.5vw;
+}
+
+
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: var(--base-color);
+    z-index: 9999999;
+    text-align:center;
+    color:#fff;
+}
+
+#splash_text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: var(--second-main-color)!important;
+}
+
+.progressbar-text{
+    color: var(--second-main-color);
+}
+
+/*IE11対策用バーの線の高さ※対応しなければ削除してください*/
+#splash_text svg{
+    height: 2px;
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+.splashbg{
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg{
+    display:block;
+    animation-name:PageAnime;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode:forwards;
+    content: "";
+    position:fixed;
+    z-index: 999;
+    width: 50%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: translateX(-300%) skewX(-45deg);
+    background-color: var(--second-main-color);/*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime{
+    0% {
+        transform-origin:left;
+        transform:translateX(-300%) skewX(-45deg);
+    }
+    100% {
+        transform-origin:left;
+        transform:translateX(500%) skewX(-45deg);
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+    opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+    animation-name:PageAnimeAppear;
+    animation-duration:1s;
+    animation-delay: 0.6s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+}
+}
+
+/* particle */
+#home{
+    /*描画されるテキストを中央寄せにする*/
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #particle{
+        width:100%;
+        height: 100vh;
+        margin-top: 10vh;
+        vertical-align: bottom;/*canvasタグ下に余白が生まれるのを防ぐ*/
+    }
+
+/* hide-wrapper */
+#hide-wrapper{
+    width: 100%;
+    height: 100vh;
+}
+
+@keyframes fadeDownAnime{
+    from {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/*==================================================
+　5-3-1 中心から外に線が伸びる（下部）
+===================================*/
+
+.gnavi li a{
+    /*線の基点とするためrelativeを指定*/
+    position: relative;
+}
+
+.gnavi li.current a,
+.gnavi li a:hover{
+    color:var(--main-color);
+}
+
+.gnavi li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*線の形状*/
+    width: 100%;
+    height: 1px;
+    background:var(--main-color);
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.gnavi li.current a::after,
+.gnavi li a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+
+
+/* home */
+#home{
+    height: 100vh;
+    width: 100vw;
+    animation:home-gradation 5s infinite;
+}
+
+@keyframes home-gradation {
+    0%{
+        background: var(--second-main-color);
+    }
+    50%{
+        background: var(--base-color);
+    }
+    100%{
+        background: var(--accsent-color);
+    }
+}
+
+#home-name{
+    animation:home-name-gradation 7.5s;
+    animation-name:fadeUpAnime;
+    animation-duration:0.55s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes home-name-gradation {
+    0%{
+        color: var(--main-color);
+    }
+    33.3%{
+        color: var(--second-main-color);
+    }
+    66.6%{
+        color: var(--accsent-color);
+    }
+    100%{
+        color: var(--base-color);
+    }
+}
+
+@keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+#home-engineer{
+    color: var(--main-color);
+    text-align: center;
+    display:block;
+    animation-name:fadeUpAnime;
+    animation-duration:0.55s;
+    animation-fill-mode:forwards;
+}
+
+#home-sns-links{
+    margin-left: 40vw;
+    padding-top: 3vh;
+}
+
+.fa-twitter{
+    color: #00acee;
+    margin-right: 17px;
+}
+
+.fa-instagram{
+    color: white;
+    padding-top: 1px;
+}
+
+.instagram{
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    border-radius: 25%;
+}
+
+i{
+    text-align: center;
+    cursor: pointer;
+}
+
+/* about */
+#about{
+    background: var(--base-color);
+}
+
+#about-title{
+    padding-top: 5vh;
+}
+
+#about-text{
+    color: var(--second-main-color);
+    font-weight:550;
+    width: 75vw;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+
+/* skill */
+#skill{
+    background: var(--base-color);
+}
+
+#skill-title{
+    padding-top: 5vh;
+}
+
+table{
+    background: var(--second-main-color);
+    color: var(--main-color);
+}
+
+#pad-table{
+    width: 90vw;
+    margin: 5vh auto 0 auto;
+    padding: 20px 15px 20px 20px;
+    font-size: 1.315rem;
+}
+
+#desktop-table{
+    width: 80vw;
+    font-size: 1.75rem;
+    padding: 30px 40px;
+    margin: 7.5vh 10vw 0 10vw;
+}
+
+/* works */
+#works{
+    background: var(--base-color);
+}
+
+#works-title{
+    padding-top: 3vh;
+}
+
+#works-ul{
+    width: 85vw;
+}
+
+.works-item{
+    list-style: none;
+    background: white;
+    cursor: pointer;
+}
+
+/* contact */
+#contact{
+    background: var(--base-color);
+}
+
+#contact-title{
+    padding-top: 4vh;
+}
+
+#contact-mail-address{
+    text-align: center;
+    color: var(--second-main-color);
+}
+
+#contact-form-btn{
+    border: solid 2px var(--second-main-color);
+    background: var(--base-color);
+    color: var(--main-color);
+    padding: 6px 15px;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 7.5vh;
+    border-radius: 100vh;
+    text-decoration: none;
+}
+
+.sns-links{
+    height: 5vh;
+    width: 20vw;
+    text-align: center;
+    margin: 5vh 0 0 40vw;
+}
+
+
+/*
+  works内のファイルのcss
+*/
+
+/* 共通*/
+
+/* works-desktop-header */
+.works-desktop-header{
+    width: 100vw;
+    height: 70px;
+    background: var(--accsent-color);
+    color: var(--main-color);
+    display: flex;
+}
+
+.works-desktop-header-ul{
+    width: 100%;
+}
+
+.works-desktop-logo{
+    color: var(--main-color);
+    font-size: 3rem;
+    margin: 0 0 0 5vw;
+    padding-top: 5px;
+}
+
+.works-desktop-li{
+    display: inline-block;
+    margin-left: 35vw;
+}
+
+.works-desktop-link,.works-footer-link{
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Dancing Script', cursive;
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.portfolio-footer-link{
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Dancing Script', cursive;
+    color: var(--main-color);
+}
+
+/* works-mobile-header */
+.works-mobile-header-wrapper{
+    width: 100vw;
+    height: 60px;
+    background: var(--accsent-color);
+    color: var(--main-color);
+}
+
+.works-mobile-logo{
+    font-size: 2.5rem;
+    color: var(--main-color);
+    font-family: 'Dancing Script', cursive;
+    margin: 0 30vw 0 10vh;
+}
+
+.works-mobile-header{
+    height: 100vh;
+    width: 100vw;
+    background: var(--second-main-color);
+    color: var(--main-color);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.works-mobile-header-ul{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.works-mobile-header-ul li{
+    margin-top: calc(50vh - 22px);
+}
+
+.works-mobile-header-link{
+    text-decoration: none;
+    color: var(--main-color);
+    position: relative;
+}
+
+/* main */
+.works-main{
+    width: 100vw;
+}
+
+.works-name{
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: .5s; /* don't forget to set a duration! */
+    margin-top: 5vh;
+    margin-bottom: 7.5vh;
+    text-align: center;
+}
+
+.works-image{
+    display: inline-block;
+}
+
+.fadeInUpTrigger{
+    opacity: 1;
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: .5s; /* don't forget to set a duration! */
+}
+
+.works-text-box{
+    height: 30vh;
+    width: 77.5vw;
+    margin: 10vh auto 0 auto;
+    font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+}
+
+.works-text-link{
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+/* animate.css */
+.no-animate{
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: .75s;
+}
+
+.animate-up-time{
+    animation-duration: .475s;
+}
