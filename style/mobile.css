@@ -1,0 +1,224 @@
+@charset 'utf-8';
+@media (max-width:420px){
+    /* Loading */
+    #splash_text{
+        font-size: 3.5rem;
+    }
+
+    /* title */
+    .title{
+        font-size: 5rem;
+    }
+
+    .wrapper{
+        height: calc(100vh - 60px);
+    }
+
+    /* header */
+    #desktop-header{
+        display: none;
+    }
+
+    #mobile-header-wrapper{
+        height: 60px;
+        width: 100%;
+        background: var(--base-color);
+    }
+    #mobile-logo{
+        font-size: 2.5rem;
+        color: var(--second-main-color);
+        font-family: 'Dancing Script', cursive;
+        margin: 0 30vw 0 10vh;
+    }
+
+    /* loading */
+    body.appear .splashbg{
+        animation-duration:1s;
+    }
+
+
+    /*==================================================
+    　5-2-7 3本線が奥行きを持って回転して×に
+    ===================================*/
+    
+    /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+    .openbtn{
+        /*ボタン内側の基点となるためrelativeを指定。
+    追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+        position:absolute;
+        top: 7px;
+        right: 5vh;
+        cursor: pointer;
+        width: 50px;
+        height:50px;
+        border-radius: 5px;
+        z-index: 99999;
+    }
+    
+    /*ボタン内側*/
+    
+    .openbtn .openbtn-area{
+        transition: all .4s;
+    }
+    
+    .openbtn span{
+        display: inline-block;
+        transition: all .4s;/*アニメーションの設定*/
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+          width: 45%;
+      }
+    
+    
+    .openbtn span:nth-of-type(1) {
+        top:20px;   
+        color: var(--main-color);
+    }
+    
+    .openbtn span:nth-of-type(2) {
+        top:28px;
+        color: var(--main-color);
+    }
+    
+    /*activeクラスが付与されると
+    線と周りのエリアが回転して×になる*/
+    
+    .openbtn.active .openbtn-area{
+        transform: rotateY(-360deg);
+    }
+    
+    .openbtn.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-135deg);
+        width: 30%;
+    }
+    
+    .openbtn.active span:nth-of-type(2) {
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(135deg);
+        width: 30%;
+    }
+    
+    #mobile-header{
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        background: var(--base-color);
+    }
+    #mobile-header ul{
+        padding-top: 25vh;
+    }
+    
+    .mobile-header-link{
+        text-decoration: none;
+        color: var(--main-color);
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.75rem;
+    }
+
+    /* home */
+    #home-name{
+        font-size: 5rem;
+        padding-top: 37.5vh;
+    }
+
+    #home-engineer{
+        font-size: 2.5rem;
+    }
+
+    #sns-links{
+        height: 20vh!important;
+        width: 25vw!important;
+    }
+
+    i{
+        font-size: 30px;
+        height: 35px;
+        width: 35px;
+    }
+
+    /* about */
+    #about-text{
+        font-size: 1.25rem;
+    }
+
+    #desktop-table{
+        display: none;
+    }
+
+    /* works */
+    #works-ul{
+        margin: 7vh auto 7vh auto;
+    }
+    
+    #works-ul img{
+        width: 80vw;
+    }
+
+    .works-item{
+        width: 80vw;
+        height: 80vw;
+        margin: 5vh auto 0 auto;
+    }
+
+    /* contact */
+    #contact-mail-address{
+        font-size: 1.2rem;
+        padding-top: 15vh;
+    }
+
+    #contact-form-btn{
+        font-size: 1rem;
+        margin-left: calc(50vw - 67.7px);
+    }
+
+    i{
+        font-size: 25px;
+        width: 27px;
+        height: 29px;
+    }
+
+    /* footer */
+    footer{
+        height: 60px;
+    }
+
+    .works-footer{
+        position: absolute;
+        left: 0;
+        top: calc(443px + 100px + 82.5vh);
+    }
+
+    .portfolio-footer-li{
+        margin-top: 16px!important;
+    }
+
+    .portfolio-footer-link{
+        font-size: 1.225rem;
+    }
+
+    /*
+    works内のファイルのcss
+    */
+    
+    .works-main{
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .works-desktop-header{
+        display: none;
+    }
+
+    .works-mobile-header-link{
+        font:1.75rem;
+    }
+
+
+}
