@@ -1,0 +1,9 @@
+@charset 'utf-8';
+/* ブレークポイント */
+@media (max-width:420px){
+
+    /* menu-wrapper */
+    .menu-list{
+        margin-left: 17vw;
+    }
+} 
