@@ -1,0 +1,229 @@
+@charset 'utf-8';
+@media screen and (min-width:421px) and (max-width:999px){
+    /* Loading */
+    #splash_text{
+        font-size: 5rem;
+    }
+
+    /* title */
+    .title{
+        font-size: 5.25rem;
+    }
+
+    /* wrapper */
+    .wrapper{
+        height: calc(100vh - 60px);
+    }
+    
+    /* header */
+    #desktop-header{
+        display: none;
+    }
+
+    #mobile-header-wrapper{
+        height: 60px;
+        width: 100%;
+    }
+    #mobile-logo{
+        font-size: 2.5rem;
+        font-family: 'Dancing Script', cursive;
+        margin: 0 30vw 0 10vh;
+    }
+
+    /* loading */
+    body.appear .splashbg{
+        animation-duration:1.175s;
+    }
+
+
+    /*==================================================
+    　5-2-7 3本線が奥行きを持って回転して×に
+    ===================================*/
+    
+    /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+    .openbtn{
+        /*ボタン内側の基点となるためrelativeを指定。
+    追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+        position:absolute;
+        top: 7px;
+        right: 5vh;
+        cursor: pointer;
+        width: 50px;
+        height:50px;
+        border-radius: 5px;
+        z-index: 99999;
+    }
+    
+    /*ボタン内側*/
+    
+    .openbtn .openbtn-area{
+        transition: all .4s;
+    }
+    
+    .openbtn span{
+        display: inline-block;
+        transition: all .4s;/*アニメーションの設定*/
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+          width: 45%;
+      }
+    
+    
+    .openbtn span:nth-of-type(1) {
+        top:20px;   
+        color: var(--main-color);
+    }
+    
+    .openbtn span:nth-of-type(2) {
+        top:28px;
+        color: var(--main-color);
+    }
+    
+    /*activeクラスが付与されると
+    線と周りのエリアが回転して×になる*/
+    
+    .openbtn.active .openbtn-area{
+        transform: rotateY(-360deg);
+    }
+    
+    .openbtn.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-135deg);
+        width: 30%;
+    }
+    
+    .openbtn.active span:nth-of-type(2) {
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(135deg);
+        width: 30%;
+    }
+    
+    #mobile-header{
+        width: 100vw;
+        height: 100vh;
+        background: var(--base-color);
+        text-align: center;
+    }
+    #mobile-header ul{
+        padding-top: 25vh;
+    }
+    
+    .mobile-header-link{
+        text-decoration: none;
+        color: var(--main-color);
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.25rem;
+        margin: 30px 0;
+    }
+
+
+    /* home */
+    #home-name{
+        font-size: 5.5rem;
+        padding-top: 32.5vh;
+    }
+
+    #home-engineer{
+        font-size: 3.43rem;
+    }
+
+    i{
+        font-size: 32px;
+        height: 37px;
+        width: 37px;
+    }
+
+    /* about */
+    #about-text{
+        font-size: 1.5rem;
+    }
+
+    #desktop-table{
+        display: none;
+    }
+    
+    /* works */
+    #works-ul{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5vh auto 10vh auto;
+    }
+    
+    #works-ul img{
+        width: 35vw;
+    }
+
+    .works-item{
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .works-item:nth-child(1){
+        margin-right: 10vw;
+        margin-left: 2vw;
+    }
+
+    .works-item:nth-child(3){
+        margin-top: 10vw;
+        margin-left: 2vw;
+    }
+
+    /* contact */
+    #contact-mail-address{
+        font-size: 1.5rem;
+        padding-top: 13vh;
+    }
+
+    #contact-form-btn{
+        font-size: 1.2rem;
+        margin-left: calc(50vw - 79px);
+    }
+    
+    /* footer */
+    footer{
+        height: 60px;
+    }
+
+    .works-footer{
+        position: absolute;
+        left: 0;
+        top: calc(443px + 75px + 82.5vh);
+    }
+
+    .portfolio-footer-li{
+        margin-top: 13px!important;
+    }
+
+    .portfolio-footer-link{
+        font-size: 1.7rem;
+    }
+
+    /*
+    works内のファイルのcss
+    */
+
+    .works-main{
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .works-desktop-header{
+        display: none;
+    }
+
+    .works-mobile-header-link{
+        font-size: 2.25rem;
+    }
+
+    .works-text-box{
+        font-size: 1.1rem;
+    }
+
+
+}
