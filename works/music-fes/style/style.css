@@ -1,0 +1,306 @@
+@charset 'utf-8';
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --main-color:#00aaff;
+    --main-color2:#f67690;
+    --base-color:white;
+    --acsent-color:#de4d4d;
+}
+html{
+    scroll-behavior: smooth;
+    width: 100%;
+}
+.wrapper-title{
+    font-family: 'Oswald' , sans-serif;
+    margin-top: 2vh;
+    text-align: center;
+    text-shadow:8px 8px 9px black;
+}
+body{
+    width: 100%!important;
+}
+
+/* header */
+header{
+    font-family: 'Oswald', sans-serif;
+    color: var(--main-color);
+    display: inline-block;
+    width: 100vw;
+    background: linear-gradient(90deg,#e6551e,#f5bc2d);
+    position:fixed;
+    z-index:100;
+    padding: 0;
+    height: 70px;
+}
+#header-title{
+    margin-left: 5vw;
+    width: 250px;
+    margin-right: 0;
+    display: inline-block;
+}
+#header-ul{
+    display:flex;
+    margin: 0!important;
+    position: relative;
+    top: -7px;
+    padding-left: 30vw;
+}
+#header-ul li{
+    list-style: none;
+    margin-top: 23px;
+}
+#header-ul a{
+    text-decoration:none;
+    margin: 0 10px;
+    color: var(--main-color);
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+#click-menu{
+    display:inline-block!important;
+    font-family: 'Montserrat',sans-serif;
+    color: white;
+    font-weight: bold;
+    border:1px white solid;
+    border-radius: 4px;
+    padding: 4px;
+    margin: 15px 5vw 20px;
+    cursor:pointer;
+    z-index: 30000;
+    position: absolute;
+    top: 5px;
+    right: 5vw;
+}
+nav{
+    width: 65vw;
+}
+.header-link-item:nth-child(4){
+    margin-right: 7vw;
+}
+.header-link-item{
+    font-size: 1.5rem;
+}
+
+
+/* second-nav */
+#second-nav{
+    height: 100vh;
+    width: 100vw;
+    background: var(--main-color);
+    color: var(--main-color);
+    z-index: 20000;
+}
+#second-nav ul{
+    height: 100vh;
+    width: 200px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+#second-nav li{
+    text-align: center;
+}
+#second-nav a{
+    color: var(--main-color2);
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 5px 0;
+    text-align: center;
+}
+#second-nav li:nth-child(1){
+    margin-top: 40vh;
+}
+.second-header-link-item a{
+    text-align: center;
+    text-decoration: none;
+}
+
+/* top-wrapper */
+#top-wrapper{
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-image: url('https://isorepublic.com/wp-content/uploads/2018/11/festival-crowd-768x512.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#top-title{
+    font-size: 10rem;
+    text-align: center;
+    padding-top: 10vh;
+    color: var(--main-color);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 1000;
+}
+#top-date-wrapper{
+    border-top: 2px solid var(--acsent-color);
+    border-bottom: 2px solid var(--acsent-color);
+    font-size: 1.75rem;
+    display: inline-block;
+    color: var(--main-color);
+}
+#top-text{
+    color: var(--main-color);
+    text-align: center;
+    margin: 2vh 3vw;
+}
+#top-box{
+    padding-top: 10vh;
+}
+
+/* about-wrapper */
+#about-wrapper{
+    height: 90vh;
+    width: 100%;
+    clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
+    --webkit-clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
+    text-align: center;
+    background: var(--main-color);
+}
+#about-title{
+    color: var(--main-color2);
+    margin-top: 0!important;
+}
+#about-text{
+    width: 500vw;
+    margin: 0 auto;
+    color: white;
+    margin-bottom: 3vh;
+    padding-top: 5vh;
+    font-weight:900;
+    width: 100%;
+}
+#about-wrapper img{
+    width: 60vw;
+}
+
+/* guests-wrapper */
+#guests-wrapper{
+    --webkit-clip-path:polygon(0 10%,100% 0%,100% 100%,0 90%) ;
+    clip-path:polygon(0 10%,100% 0%,100% 100%,0 90%);
+    height: 90vh;
+    width: 100%;
+    background: var(--main-color2);
+    color: var(--base-color);
+}
+#guests-title{
+    padding-top: 20px;
+    color: var(--main-color);
+}
+#guests-box{
+    width: 80vw;
+    height: 55vh;
+    margin: 0 auto;
+}
+.guests-item:nth-child(1){
+    margin-top: 2.5vh;
+}
+.guests-item{
+    height: 50%;
+    width: 100%;
+    position:relative;
+}
+.guests-icon{
+    border-radius: 50%;
+}
+.guests-name{
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.6rem;
+    top:0;
+    left:calc(10vw + 13.5vh);
+}
+.guests-text{
+    position:absolute;
+    left:calc(10vw + 13.5vh);
+    top:3.5rem;
+}
+
+/* news */
+#news-wrapper{
+    height: 90vh;
+    width: 100%;
+    clip-path: polygon(0 0,100% 10%,100% 90%,0 100%);
+    --webkit-clip-path: polygon(0 0,100% 10%,100% 90%,0 100%);
+    background: var(--main-color);
+}
+#news-title{
+    color: var(--main-color2);
+    padding-top: 25px;
+}
+table{
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+tr{
+    border-bottom: 1px solid var(--acsent-color);
+    color: var(--base-color);
+}
+.data-item{
+    margin-right: 5px;
+    border-right: 1px solid var(--acsent-color);
+}
+tr:nth-child(4){
+    border: none;
+}
+td{
+    padding-right: 10px;
+}
+
+/* contact */
+#contact-wrapper{
+    clip-path: polygon(0 10%,100% 0,100% 100%,0 100%);
+    --webkit-clip-path: polygon(0 10%,100% 0,100% 100%,0 100%);
+    background: var(--main-color2);
+    height: 90vh;
+    width: 100%;
+}
+#contact-title{
+    color: var(--main-color);
+    padding-top: 20px;
+}
+#contact-link-btn{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    border-radius: 5px;
+    border:1px solid var(--acsent-color);
+    font-weight: bold;
+    padding: 4px 7px;
+    width: 132px;
+    margin: 10vh 0 0 calc(50vw - 66px);
+    transition: .7s background;
+    margin-top: 12.5vh;
+}
+#contact-link-btn:hover{
+    background: var(--acsent-color);
+}
+#sns-box{
+    margin-top: 1.5rem;
+    width: 150px;
+    margin-left: calc(50vw - 67px);
+}
+#sns-box a{
+    color: #000;
+    text-decoration: none;
+}
+i{
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.5s;
+}    
+i:hover{
+    color: white;
+}
+#sns-box-title{
+    margin-bottom: 3.5vh;
+    margin-top: 8vh;
+}
