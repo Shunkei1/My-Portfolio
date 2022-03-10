@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="style/desktop.css">
+    <link rel="stylesheet" href="style/mobile.css">
+    <link rel="stylesheet" href="style/pad.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+        <div id="hide-wrapper">
+
+            <!-- header -->
+
+            <!-- desktop-header -->
+            <div id="desktop-header">
+                <ul class="gnavi">
+                    <li id="desktop-portfolio-logo">
+                        <span id="desktop-logo">Portfolio</span>
+                    </li>
+                    <li><a href="#home" class="desktop-header-link">Home</a></li>
+                    <li><a href="#about" class="desktop-header-link">About</a></li>
+                    <li><a href="#skill" class="desktop-header-link">Skill</a></li>
+                    <li><a href="#works" class="desktop-header-link">Works</a></li>
+                    <li><a href="#contact" class="desktop-header-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- mobile-header -->
+            <div id="mobile-header-wrapper">
+                <span id="mobile-logo">Portfolio</span>
+                <div class="openbtn"><div class="openbtn-area"><span></span><span></span></div></div>
+                <div id="mobile-header" class="hide">
+                    <ul class="gnavi">
+                        <li><a href="#home" class="mobile-header-link">Home</a></li>
+                        <li><a href="#about" class="mobile-header-link">About</a></li>
+                        <li><a href="#skill" class="mobile-header-link">Skill</a></li>
+                        <li><a href="#works" class="mobile-header-link">Works</a></li>
+                        <li><a href="#contact" class="mobile-header-link">Contact</a></li>
+                    </ul>
+                    <div class="sns-links">
+                        <!-- iタグ -->
+                        <i class="fab fa-twitter header-sns-link"></i>
+                        <i class="instagram fab fa-instagram header-sns-link"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- main -->
+            <main>
+
+                <!-- Home -->
+                <div id="home">
+                    <canvas id="particle"></canvas>
+                </div>
+    
+                <!-- about -->
+                <div id="about" class="wrapper border-wrapper">
+                    <h1 id="about-title" class="title js_typing dancing fadeUp">About</h1>
+                    <p id="about-text" class="animate__time animate__fadeInUp animate__animated animate__delay-1s">
+                        Webエンジニアとして活動しています。
+                        <br>コードを書いたり、音楽を聞いたりするのが好きです。
+                        <br>使用する言語はhtmlやcss、javascript(jquery)です。
+                        <br>また、webサイトによく「動き」をつけます。
+                    </p>
+                </div>
+
+                <!-- skill -->
+                <div id="skill" class="wrapper border-wrapper">
+                    <h1 id="skill-title" class="title js_typing dancing fadeUp">Skill</h1>
+                    <table id="desktop-table" class="fadeUp">
+                        <tr>
+                            <td>HTML   　　  　・・・・・・・・・・・・</td>
+                            <td>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CSS 　　　　・・・・・・・・・・・・</td>
+                            <td>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jquery　　　・・・・・・・・・・・・</td>
+                            <td>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Javascript 　・・・・・・・・・・・・</td>
+                            <td>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </td>
+                        </tr>
+                    </table>
+                    <table id="pad-table" class="fadeUp">
+                        <tr>
+                            <td>HTML ・・・</td>
+                            <td>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CSS・・・・</td>
+                            <td>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jquery   ・・</td>
+                            <td>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Javascript   ・</td>
+                            <td>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- works -->
+                <div id="works" class="border-wrapper">
+                    <h1 class="title js_typing dancing fadeUp" id="works-title">Works</h1>
+                    <ul id="works-ul">
+                        <li class="works-item fadeUp">
+                            <a target="_blank" rel="noopener noreferrer"  href="works/chez-bakery/index2.html">
+                                <img src="images/chez-bakery-image.png" alt="chez-bakery">
+                            </a>
+                        </li>
+                        <li class="works-item fadeUp">
+                            <a target="_blank" rel="noopener noreferrer" href="works/music-fes/index2.html">
+                                <img src="images/music-fes-image.png" alt="Music Fes">
+                            </a>
+                        </li>
+                        <li class="works-item fadeUp">
+                            <a target="_blank" rel="noopener noreferrer"  href="works/profile/index2.html">
+                                <img src="images/profile-image.png" alt="Profile">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- contact -->
+                <div id="contact" class="wrapper">
+                    <h1 id="contact-title" class="title js_typing dancing fadeUp">Contact</h1>
+                    <p id="contact-mail-address" class="fadeUp">shunkeikobayashi@gmail.com</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdn61hNgSxmPfWYcQcMBMDKELi2LnRtF5UzLqsQMk4kzp4pkA/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" id="contact-form-btn">Contact Form</a>
+                    <div class="sns-links fadeUp">
+                        <!-- iタグ -->
+                        <a href="https://twitter.com/Shunkei9?t=QeOCQCNJBFeiSpocXgJTgQ&s=03" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/shunkei0" target="_blank" rel="noopener noreferrer"><i class="instagram fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- footer -->
+            <footer id="portfolio-footer">
+                <ul class="gnavi portfolio-footer-ul">
+                    <li class="portfolio-footer-li"><a href="#home" class="dancing portfolio-footer-link">Home</a></li>
+                    <li class="portfolio-footer-li"><a href="#about" class="dancing portfolio-footer-link">About</a></li>
+                    <li class="portfolio-footer-li"><a href="#skill" class="dancing portfolio-footer-link">Skill</a></li>
+                    <li class="portfolio-footer-li"><a href="#works" class="dancing portfolio-footer-link">Works</a></li>
+                    <li class="portfolio-footer-li"><a href="#contact" class="dancing portfolio-footer-link">Contact</a></li>
+                </ul>
+            </footer>
+
+
+
+        <!-- hide-wrapper End-->
+        </div>
+
+
+    <!-- JS -->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/shuffle-text@0.3.0/build/shuffle-text.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
+    <script src="script/particle.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>
