@@ -1,0 +1,6 @@
+@charset 'utf-8';
+@media screen and (min-width:900px) and (max-width:1199px){
+    iframe{
+        width: 800px;
+    }
+}
