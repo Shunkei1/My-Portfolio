@@ -125,7 +125,7 @@ nav{
     height: 100vh;
     width: 100%;
     text-align: center;
-    background-image: url('https://isorepublic.com/wp-content/uploads/2018/11/festival-crowd-768x512.jpg');
+    background-image: url('../images/music-fes-image.jpg');
     background-position: center center;
     background-size: cover;
 }
