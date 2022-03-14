@@ -336,6 +336,7 @@ body.appear #container{
 i{
     text-align: center;
     cursor: pointer;
+    text-decoration:none;
 }
 
 /* about */
