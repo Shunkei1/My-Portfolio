@@ -251,7 +251,7 @@ body.appear #container{
 #home{
     height: 100vh;
     width: 100vw;
-    animation:home-gradation 5s infinite;
+    animation:home-gradation 8s infinite;
 }
 
 @keyframes home-gradation {
