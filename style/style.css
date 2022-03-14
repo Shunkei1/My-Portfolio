@@ -339,6 +339,10 @@ i{
     text-decoration:none;
 }
 
+.twitter-i{
+    margin-left:5px;
+}
+
 /* about */
 #about{
     background: var(--base-color);
